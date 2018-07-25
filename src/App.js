@@ -33,6 +33,11 @@ class App extends Component {
     this.setState ({ todos : todos });
   }
 
+  deleteTodo(item) {
+    const foo = this.state.todos.filter(i => i.description !== item.description)
+    this.setState({foo})
+  }
+
   render() {
     return (
       <div className="App">
